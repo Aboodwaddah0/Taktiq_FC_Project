@@ -1,0 +1,21 @@
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.next-header
+{
+ background-image: url("/img/the-ball-sport-football-russia-wallpaper-preview.jpg");
+  width:1920px;
+  height: 50dvh;
+  background-repeat: no-repeat;
+}
+
+h1
+{
+  
+}

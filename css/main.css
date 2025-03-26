@@ -1,0 +1,738 @@
+
+header
+{
+    position:sticky;
+    top:0;
+  background-color: #000;
+   z-index:10;
+}
+main
+{
+    background-image: url('/img/american-football-players-wearing-equipment.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100dvb;
+}
+
+
+header nav
+{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+   
+ 
+}
+header nav ul
+{
+    display: flex;
+    justify-content: center;
+align-items: center;
+gap: 47px;
+
+}
+
+header nav ul a
+{
+    font-family: var(--secFont);
+    font-size: 17px;
+    font-weight: 680;
+    color: rgb(255, 255, 255);
+}
+
+header nav ul a:active
+{
+text-decoration: underline;
+color: var(--mainColor);
+}
+
+header nav ul a:hover
+{
+   
+    color: #4a6f5d;
+    transition: 300ms ease-in-out;
+}
+
+
+
+header form
+{
+   padding:25px 25px
+}
+
+
+main .title 
+{
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 600px;
+    font-size: 28px;
+    text-align: center;
+    font-family: var(--secFont);
+}
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; 
+    height: 50px;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width:1;
+	stroke: #F1F1F1;
+	font-size: 37px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(74,111,93,0); stroke: #4a6f5d;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 1;
+	}
+	70%  {fill: rgba(74,111,93,0); stroke: #4a6f5d; }
+	80%  {fill: rgba(74,111,93,0); stroke: #4a6f5d; stroke-width: 2; }
+	100% {
+		fill: rgba(74,111,93,1); stroke: rgba(241,241,241,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {background-color: #000000};
+
+
+.players-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; 
+    color: #fff; 
+    padding: 20px; 
+}
+
+.players-section .row
+{
+   
+    padding: 0px 50px;
+    margin-top: 20px;
+  
+}
+
+.players-section h1
+{
+    font-family:var(--secFont);
+    color:var(--mainColor);
+}
+
+.players-section .add-player-btn  img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 30px;
+    padding: 0px 8px;
+
+  
+}
+.players-section .add-player-btn button
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+   font-family: var(--secFont);
+   font-size: 17px;
+   background-color: var(--mainColor);
+   border:0;
+   padding:2px 12px;
+   border-radius: 9px;
+   color: white;
+   transition: 200ms ease-in-out;
+}
+
+.players-section .add-player-btn button:hover
+{
+background-color: #000000;
+border-radius: 4px;
+transform: scale(1.1);
+}
+
+.players-section .player-table
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 40px;
+}
+.players-section .player-table
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: var(--mainColor);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-family: var(--secFont);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+th {
+    background: rgb(255, 255, 255);
+    color: var(--mainColor);
+}
+
+td
+{
+    color: white;
+
+}
+
+tr td img
+{
+width:60px;
+height: 100%;
+border-radius: 50% ;
+}
+
+
+tr td .action-btn
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap:10px;
+    
+}
+
+
+
+.delete,.edit {
+    width: 100px; 
+    height: 35px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+    position: relative; 
+}
+
+.delete, button span ,.edit, button span  {
+    transition: 200ms;
+}
+
+.delete .text,.edit .text {
+    transform: translateX(15px); 
+    color: white;
+    font-weight: bold;
+    font-size: 16px; 
+    font-family: var(--secFont);
+}
+
+.delete .icon ,.edit .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(75px); 
+    height: 20px; 
+    width: 25px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete svg ,.edit svg {
+    width: 10px; 
+    fill: #eee;
+}
+
+.delete:hover{
+    background: #ff3636;
+}
+
+.delete:hover .text,.edit:hover .text {
+    color: transparent;
+}
+
+.delete:hover .icon,.edit:hover .icon  {
+    width: 100px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.delete:focus ,.edit:focus{
+    outline: none;
+}
+
+.delete:active .icon svg,.edit:active .icon svg {
+    transform: scale(0.8);
+}
+.edit
+{
+    background-color: green;
+}
+.edit .icon
+{
+    border-left: 1px solid green;
+   
+}
+
+
+.matches h1
+{
+    font-family: var(--secFont);
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.matches .result-card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background-color:rgb(255, 255, 255);
+    width: 50%;
+    gap: 30px;
+    background-color: var(--mainColor);
+  
+    
+}
+
+.matches .teams
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+    width: 100%;
+  
+}
+.matches .result-card img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+.result-card .img-team1,.img-team2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+
+}
+.result-card p
+{
+    color: #f5f5f5;
+    font-family: var(--mainFont);
+    font-size: 25px;
+    text-align: center;
+   
+}
+.result-card .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    padding:40px 30px; 
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid white;
+}
+.result-card .result p
+{
+    text-align: center;
+    font-size: 43px;
+    color: #ffffff;
+    padding: 5px 12px;
+   
+}
+
+.last-matches .result-cards
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  
+}
+.result-card .details
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-card .details p
+{
+    font-family: var(--secFont);
+    font-weight: 600;
+}
+.result-card .details .champ-name
+{
+    background-color: #dddddd71;
+}
+
+.result-card .details .time
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.matches .next-match-card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap: 30px;
+    background-color:#f32c46;
+  width: 50%;
+}
+.next-match-card .left-side
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 25px 80px;
+}
+.next-match-card .right-side
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.next-match-card p 
+{
+    color: white;
+    font-size: 22px;
+    font-family: var(--secFont);
+    text-align: center;
+}
+
+.next-match-card h2
+{
+    font-size: 43px;
+    color: white;
+    background-color: #901727;
+    padding: 5px 12px;
+    font-family: var(--secFont);
+}
+
+.next-match-card .teams p
+{
+    font-family: var(--mainFont);
+    font-weight: 800;
+    font-size: 25px;
+}
+.about-us 
+{
+padding: 240px ;
+
+}
+.about-us .row
+{
+    gap: 100px;
+}
+
+.about-us img
+{
+width: 500px;
+}
+
+.about-us .left-side
+{
+    padding: 20px;
+}
+
+.about-us .right-side
+{  
+   display: flex;
+  flex-direction: column;
+    font-family: var(--secFont);
+    text-align:center;
+    gap: 30px;
+ 
+
+}
+.about-us h1
+{
+    color: var(--mainColor);
+    font-size: 33px;
+    background-color: #6e8c7d91;
+    padding: 4px 6px;
+ 
+   
+}
+.about-us h2
+{  
+    font-size: 40px;
+    font-weight:800;
+
+}
+.about-us span
+{
+    color: var(--mainColor);
+    padding-right: 15px;
+}
+.about-us p
+{
+    text-align: center;
+    font-family:var(--secFont);
+    font-size: 22px;
+    font-weight: 400;
+}
+.about-us .read 
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.about-us button
+{
+    font-family: var(--secFont);
+    color: var(--mainColor);
+    background-color: white;
+    border: 5px solid var(--mainColor);
+    padding: 8px 18px;
+    font-weight: 800;
+    font-size: 19px;
+    transition: 200ms ease-in-out;
+ 
+}
+.about-us .title
+{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.about-us button:hover
+{
+    color: white;
+    background-color: var(--mainColor);
+    box-shadow: 0 0px 9px 2px var(--mainColor);
+}
+
+.swiper {
+    width:900px;
+    height: 700px;
+  }
+
+  .swiper img
+  {
+    width:900px;
+    height: 700px;
+  }
+  .about-us .content
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .gallery 
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/img/gallery/bg-section.jpg);
+   
+}
+  
+
+  .gallery .title
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:40px ;
+    flex-direction: column;
+    gap:4px;
+    
+  }
+  .gallery .title h1
+  {
+font-family: var(--secFont);
+font-weight: 800;  
+color: var(--mainColor);
+font-size: 45px;
+}
+
+.gallery .img-box
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+    padding: 20px ;
+}
+
+.gallery .img-box img
+{
+    width: 300px;
+    transition:transform 300ms ;
+  cursor: pointer;
+}
+.gallery .line1
+{
+    width:300px ;
+    height: 5px;
+    background-color: var(--mainColor);
+    opacity: 0.5;
+}
+.gallery .line2
+{
+    width:300px ;
+    height: 5px;
+    background-color: var(--mainColor);
+   
+}
+.img-box .img-container
+{
+    overflow: hidden;
+    height:200px;
+}
+.img-box .img-container:hover img {
+    transform: scale(1.1);
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+
+}
+.overlay img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid var(--mainColor);
+}
+
+.players
+{
+   
+    text-align: center;
+    background-color:#000000;
+    margin-bottom: 200px;
+}
+.players .container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+padding-bottom: 40px;
+}
+.players .card 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-direction: column;
+  position: relative;
+
+
+}
+
+.players h1,h2
+{
+    font-family: var(--secFont);
+    color: white;
+    font-weight: 800;
+}
+.players h2
+{
+  font-size: 18px;
+}
+.players h1 
+{
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.players .card .player-photo 
+{
+   
+   width: 240px;  
+    height: 240px;
+    overflow: hidden;
+    border-radius:10px ;
+}
+
+.players .card .player-photo  img
+{
+    width: 100%;
+    height: 100%;
+  
+  
+}
+.players .card h2 
+{
+    font-size:30px;
+    padding-bottom: 80px;
+}
+
+.players .player-number p
+{
+    color: rgb(241, 230, 230);
+    font-size: 45px;
+    font-family: var(--mainFont);
+ 
+}
+.swiper2 
+{
+    width: 700px;
+    position: relative !important;
+  }
+
+
+.player-info
+{
+  display: none;
+}
+
+.players .card:hover .player-info
+{
+    background-color: #00110962;
+    position: absolute;
+    width: 240px;  
+    height: 240px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+ 
+}

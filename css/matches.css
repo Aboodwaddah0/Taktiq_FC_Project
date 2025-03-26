@@ -1,0 +1,157 @@
+.last-result .result-container
+{
+display: grid;
+  grid-template-columns: repeat(3,1fr);
+  flex-direction: row;
+  gap: 20px;
+  padding: 50px 20px;
+
+}
+.last-result .title  h1
+{
+  text-align: center;
+  font-family: var(--secFont);
+  padding: 40px;
+  font-weight: 800;
+}
+
+
+.next-matches .title h1
+{
+  font-family: var(--secFont);
+  padding: 33px;
+  font-weight: 800;
+  text-align: center;
+}
+.matches-box
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  flex-direction: row;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.match-card
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  transition: 300ms ease-in-out ;
+}
+
+.match-card .details
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+   gap:50px;
+   background-color: var(--mainColor);
+   padding: 2px 20px;
+   width: 100%;
+}
+.match-card .details h1,h2
+{
+  font-size: 15px;
+  font-family: var(--mainFont);
+  color: rgb(0, 0, 0);
+}
+
+.match-card h2
+{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.match-card .teams 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.match-card .teams img
+{
+width: 50px;
+height: 50px;
+}
+
+.match-card .teams .team1,.team2
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.match-card .teams .content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.match-card p
+{
+  font-family: var(--mainFont);
+  font-size: 15px;
+ 
+}
+.match-card .content p
+{
+  font-family: var(--secFont);
+  font-weight: 700;
+  text-align: center;
+  color: #741a1a;
+  font-size: 19px;
+}
+
+.match-card .content span
+{
+ 
+color: black;
+  padding: 0px 10px;
+  text-align: center;
+}
+.match-card .stadium p
+{
+color: #741a1a;
+font-size: 17px;
+}
+.match-card:hover
+{
+  box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.712);
+  transform: scale(1.01);
+ 
+}
+.league-table 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.league-table h1
+{
+  font-family: var(--secFont);
+  padding: 40px;
+  font-weight: 800;
+}
+.table-container
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+table 
+{
+text-align: center;
+  background-color: var(--mainColor);
+}
+
