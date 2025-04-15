@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-<section class="h-van">
-    <nav class="navbar navbar-expand navbar-light  shadow-sm ">
+<div class="h-van">
+    <nav class="navbar navbar-expand navbar-light shadow-sm ">
         <div class="container-fluid">
             <button class="btn btn-sm btn-dark d-lg-none" id="sidebarToggle">
                 <i class="fas fa-bars"></i>
@@ -33,8 +33,36 @@
             </ul>
         </div>
     </nav>
-</section>
-<div class="content">
+</div>
+
+<div class="vertical-nav position-fixed top-0 left-0">
+  <div class="title">
+      <div class="title-img">
+          <img src="./img/manager (1).png" alt="Manager">
+      </div>
+      <p>ادارة الفــريق</p>
+  </div>
+  <ul class="nav flex-column py-2 px-5 fw-bold text-center gap-4">
+      <li class="nav-item">
+          <a class="nav-link active" href="#dashboard">لوحة التحكم</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link text-white" href="#players">اللاعبين</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link text-white" href="#training">التدريبات</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link text-white" href="#tactics">التكتيكات</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link text-white" href="#statistics">الاحصائيات</a>
+      </li>
+  </ul>
+</div>
+
+
+<section id="dashboard" class="content">
 
 <section class="first-cards d-flex justify-content-center align-items-center gap-5 py-5 ps-5  ">
     <div class="card text-white bg-primary mb-3" style="width:20%">
@@ -73,13 +101,11 @@
         </div>
     </div>
     
-   
-    
-   
+  
     
   </section>
 
-  <section class="card-features  d-flex justify-content-center align-items-center gap-4 ">
+  <section class="card-features  d-flex justify-content-center  gap-4 ">
     <div class="card1 shadow p-3 mb-5 bg-body rounded " style="width: 35%;">
         <div class="card-header py-4 text-center">
          المباريات القادمة
@@ -123,6 +149,7 @@
          جدول التدريبات 
         </div>
         <div class="card-body">
+          <div class="table-responsive">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -140,6 +167,13 @@
                       <td>@mdo</td>
                     </tr>
                     <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      
+                    <tr>
                       <th scope="row">2</th>
                       <td>Jacob</td>
                       <td>Thornton</td>
@@ -152,51 +186,421 @@
                     </tr>
                   </tbody>
               </table>
+              </div>
               <div class="d-flex justify-content-end">
-                <a href="#" class="btn btn-primary">انشاء جلسة جديدة</a>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">انشاء جلسة جديدة</a>
             </div>
         </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">إنشاء جلسة جديدة</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+             <form class="d-flex   justify-content-center align-items-center flex-column gap-4 ">
+              <input type="date" name="تاريخ التدريب" id="">
+              <select class="form-select" aria-label="Default select example" style="max-width: 40%;">
+                <option selected>اختر نوع التدريب</option>
+                <option value="1">اللياقة البدنية</option>
+                <option value="2">المهارات الفنية</option>
+                <option value="3">التكتيك والتمركز</option>
+                <option value="4">التدريبات الدفاعية</option>
+                <option value="5">التدريبات الذهنية</option>
+                <option value="6">تدريبات حراس المرمى </option>
+              </select>
+              <div class="d-flex gap-2">
+              <label for="">مدة التدريب</label>
+              <input type="number" name="المدة" id="">
+            </div>
+              <select class="form-select" aria-label="Default select example" style="max-width: 40%;">
+                <option selected>الحالة</option>
+                <option value="1">مكتمل</option>
+                <option value="2">قيد الانتظار</option>
+              </select>
+             </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                <button type="button" class="btn btn-primary">حفظ الجلسة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
 </section>
+<div class="charts d-flex gap-4  py-3 justify-content-center align-items-center">
+
 
 <div class="performance-chart">
     <canvas id="myChart"></canvas>
   </div>
+
+   <div class="winProbability-chart " style="width:35%;">
+    <canvas id="myChart2"></canvas>
+  </div>
+</div>
+ 
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="players" style="display: none;">
    
+  <div class="main-content">
+    <div class="container-fluid p-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">إدارة اللاعبين</h2>
+            <div class="btn-group">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPlayerModal">
+                    <i class="fas fa-plus me-1"></i> إضافة لاعب
+                </button>
+                <button class="btn btn-outline-secondary">
+                    <i class="fas fa-download me-1"></i> تصدير
+                </button>
+            </div>
+        </div>
+
+        <div class="card mb-4 d-flex justify-content-center">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">المركز</label>
+                        <select class="form-select">
+                            <option selected>جميع المراكز</option>
+                            <option>حارس مرمى</option>
+                            <option>مدافع</option>
+                            <option>لاعب وسط</option>
+                            <option>مهاجم</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">الحالة</label>
+                        <select class="form-select">
+                            <option selected>جميع الحالات</option>
+                            <option>متاح</option>
+                            <option>مصاب</option>
+                            <option>موقوف</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">الفئة العمرية</label>
+                        <select class="form-select">
+                            <option selected>جميع الأعمار</option>
+                            <option>أقل من 18</option>
+                            <option>18-25</option>
+                            <option>26+</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-end  "style="max-width: 80px; ">
+                        <button class="btn btn-primary "> بحث </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">تشكيلة الفريق</h5>
+                <div class="d-flex">
+                    <input type="text" class="form-control form-control-sm me-2" placeholder="ابحث عن اللاعبين...">
+                    <button class="btn btn-sm btn-outline-secondary">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>اللاعب</th>
+                                <th>المركز</th>
+                                <th>العمر</th>
+                                <th>المباريات</th>
+                                <th>الأهداف</th>
+                                <th>التقييم</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="" width="32" height="32" class="rounded-circle me-2">
+                                        <span>ديفيد جونسون</span>
+                                    </div>
+                                </td>
+                                <td>مهاجم</td>
+                                <td>24</td>
+                                <td>12</td>
+                                <td>8</td>
+                                <td>
+                                    <div class="rating">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-success">متاح</span></td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary me-1 ">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                     </tbody>
+                    </table>
+                </div>
+                <nav class="mt-3">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">السابق</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">التالي</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
 </div>
 
-<section class="vertical-nav position-fixed top-0 left-0 zindex-5">
-    <div class="title"><div class="title-img"><img src="./img/manager (1).png" alt="">
-    </div>
-     <p>ادارة الفــريق</p>
-    </div>
-    <ul class="nav flex-column py-2 px-5 fw-bold  text-center gap-4 ">
-        <li class="nav-item hc-black ">
-          <a class="nav-link text-white text-md-startactive  " aria-current="page" href="#">لوحة التحكم</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">اللاعبين</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">التدريبات</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#">التكتيكات</a>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">الاحصائيات</a>
-          </li>
-     
-      </ul>
+<div class="modal fade" id="addPlayerModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">إضافة لاعب جديد</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">الاسم الأول</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">الاسم الأخير</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">تاريخ الميلاد</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">المركز</label>
+                            <select class="form-select">
+                                <option selected>اختار المركز</option>
+                                <option>حارس مرمى</option>
+                                <option>مدافع</option>
+                                <option>لاعب وسط</option>
+                                <option>مهاجم</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">رقم القميص</label>
+                            <input type="number" class="form-control" min="1" max="99">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">الهاتف</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">الصورة الشخصية</label>
+                            <input type="file" class="form-control">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-primary">حفظ اللاعب</button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section id="statistics" class="player-statis  gap-5 py-5">
+  <div class="container-card d-flex justify-content-center gap-5 w-100">
+    <div class="card w-25">
+        <div class="card-header text-center bg-primary text-white">
+            افضل الهدافين
+        </div>
+        <div class="card-body text-center bg-light">
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="bg-info text-white">
+                        <tr>
+                            <th>الاعب</th>
+                            <th>الأهداف</th>
+                            <th>المساهمة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mohammad</td>
+                            <td>12</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Ali</td>
+                            <td>10</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card w-25">
+        <div class="card-header text-center bg-warning text-white">
+           البطاقات
+        </div>
+        <div class="card-body text-center bg-light">
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead class="bg-info text-white">
+                        <tr>
+                            <th>الاعب</th>
+                            <th>بطاقات صفراء</th>
+                            <th>بطاقات حمراء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mohammad</td>
+                            <td>12</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Ali</td> 
+                            <td>10</td>
+                            <td>13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="goalsChart d-flex  ">
+ <div class="w-50 py-5 px-5"><canvas  id="goalsChart1"></canvas></div>
+ <div class="w-50 py-5 px-5"><canvas  id="goalsChart2"></canvas></div>
+  </div>
+
 
     
+  
+   <div class="league-table">
+ 
+    <div class="table-container2">
+           
+
+
+    </div>
+    
+
+       
+   </div>
+
+   
+</section>
+
+
+<section id="training">
+   <div class="py-5 px-5" ><button  class="add-train-btn bg-danger border-0 fs-5 px-1 py-1 rounded-1 text-white" data-bs-toggle="modal" data-bs-target="#myModal2">اضافة تدريب</button></div> 
+<div id='calendar' class=" w-75 py-2  mx-auto"></div>
+
+<div class="modal fade" id="myModal2" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">إنشاء جلسة جديدة</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+       <form class="d-flex   justify-content-center align-items-center flex-column gap-4 ">
+        <input type="date" name="تاريخ التدريب" id="date-events">
+        <input type="time" name="وقت التدريب" id="time-events">
+        <select id="title-events" class="form-select" aria-label="Default select example" style="max-width: 40%;">
+          <option selected>اختر نوع التدريب</option>
+          <option value="1">اللياقة البدنية</option>
+          <option value="2">المهارات الفنية</option>
+          <option value="3">التكتيك والتمركز</option>
+          <option value="4">التدريبات الدفاعية</option>
+          <option value="5">التدريبات الذهنية</option>
+          <option value="6">تدريبات حراس المرمى </option>
+        </select>
+        <div class="d-flex gap-2">
+        <label for="">مدة التدريب</label>
+        <input type="number" name="المدة" id="">
+      </div>
+        <select class="form-select" aria-label="Default select example" style="max-width: 40%;">
+          <option selected>الحالة</option>
+          <option value="1">مكتمل</option>
+          <option value="2">قيد الانتظار</option>
+        </select>
+       </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+          <button type="button" class="btn btn-primary " id="addEventBtn">حفظ الجلسة</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./coach.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/coach.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+
   
 </body>
 </html>

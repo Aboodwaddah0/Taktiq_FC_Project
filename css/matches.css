@@ -133,7 +133,7 @@ font-size: 17px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 100px; 
 }
 
 .league-table h1
@@ -147,11 +147,15 @@ font-size: 17px;
 display: flex;
 justify-content: center;
 align-items: center;
+
 }
 
 table 
 {
 text-align: center;
-  background-color: var(--mainColor);
+background-color: var(--mainColor);
+
 }
+
+
 

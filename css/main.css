@@ -563,7 +563,7 @@ width: 500px;
     align-items: center;
     flex-direction: column;
     background-image: url(/img/gallery/bg-section.jpg);
-   
+   margin-top: 90px;
 }
   
 
@@ -647,6 +647,7 @@ font-size: 45px;
     text-align: center;
     background-color:#000000;
     margin-bottom: 200px;
+    overflow: hidden;
 }
 .players .container
 {
@@ -717,6 +718,7 @@ padding-bottom: 40px;
 {
     width: 700px;
     position: relative !important;
+
   }
 
 
@@ -736,3 +738,193 @@ padding-bottom: 40px;
     justify-content: center;
  
 }
+
+footer {
+    background-color: #000000;
+    color: #f9fafb;
+    padding: 20px 10px;
+   font-family: var(--secFont);
+
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #f9fafb;
+  }
+  
+  .footer-links {
+    list-style: none;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-links a:hover {
+    color: #f9fafb;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #374151;
+    color: #f9fafb;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .social-icon:hover {
+    background-color: #4b5563;
+  }
+  
+  .footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer-section {
+      min-width: 100%;
+    }
+  }
+
+  .Achievements {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.Achievements .background-cups
+{
+background-color: rgba(190, 27, 54, 0.685);
+ width:100%;
+position: absolute;
+bottom:50px;
+box-shadow: 0px 2px 50px 100px rgba(190, 27, 54, 0.685);
+
+}
+
+.background-cups 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.background-cups .content
+{
+    display: flex;
+ flex-direction: column;
+ font-family: var(--secFont);
+ color: white;
+ text-align: center;
+ font-size: 32px;
+}
+.background-cups .content h1
+{
+    background-color: rgb(190, 27, 54);
+}
+.background-cups .cups 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 200px;
+}
+.background-cups .cups .cup
+{
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+   font-family: var(--secFont);
+   font-size: 60px;
+}
+
+.background-cups .cups .name-cup
+{
+    font-size: 30px;
+    font-family: var(--mainFont);
+    flex-wrap: nowrap;
+  
+}
+
+.background-cups .cups img
+{
+    width: 100%;
+}
+

@@ -1,58 +1,157 @@
-
-
-.vertical-nav
+/* Main content positioning */
+body
 {
-    background-color:var(--mainColor);
-    height: 100dvb;
-    width: 200px;
-    font-family:var(--secFont);
-
+  font-family: var(--secFont);
+  font-weight: 600;
 }
 
-.vertical-nav .title 
+.content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    transition: all 0.3s ease;
+  }
+
+  .vertical-nav {
+    background-color: var(--mainColor);
+    height: 100vh;
+    width: 200px;
+    font-family: var(--secFont);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .vertical-nav .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 40px;
+    gap: 12px;
+  }
+  
+  .vertical-nav .title p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .vertical-nav .title img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Horizontal navigation */
+  .h-nav {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    width: calc(100% - 200px);
+    z-index: 999;
+  }
+  
+  .nav-link:hover {
+    color: black;
+  }
+  
+
+  .first-cards,
+  .card-features {
+    font-family: var(--secFont);
+  }
+  
+  .performance-chart {
+    width: 50%;
+  }
+  
+ 
+  .player-statis {
+    font-family: var(--secFont);
+    font-weight: 700;
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+  
+
+  #players,
+  #statistics,
+  #training,
+  #tactics {
+    margin-left: 250px;
+    display: none ;
+  }
+  
+  #dashboard {
+    display: block;
+  }
+
+
+  
+
+  @media (max-width: 768px) {
+    .vertical-nav {
+      width: 70px;
+    }
+  
+    .vertical-nav .title {
+      padding: 20px 10px;
+    }
+  
+    .vertical-nav .title p {
+      font-size: 12px;
+    }
+  
+    .content,
+    .player-statis,
+    .h-nav {
+      margin-left: 70px;
+      width: calc(100% - 70px);
+    }
+  
+    .h-nav {
+      left: 70px;
+    }
+  }
+
+
+  .league-table 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+  .table-container2
 {
 display: flex;
 justify-content: center;
 align-items: center;
-flex-direction: column;
-padding: 40px 40px;
-gap: 12px;
+width: 100%;
 }
-.vertical-nav .title p
+
+table 
 {
 text-align: center;
-color: white;
-font-size: 20px;
-font-weight: 700;
+  background-color: var(--mainColor);
+width: 75%;
+
 }
-.vertical-nav .title img
+th
 {
-    width: 100%;
-    height: 100%;
+  background-color: white;
+}
+tr
+{
+font-size: 18px;
 }
 
-
-
-.nav-link:hover
-{
-color: black;
-}
-.first-cards 
-{
-    font-family: var(--secFont);
-}
-.card-features 
-{
-    font-family: var(--secFont);
-}
-
-.content
-{
-    width: calc(100% - 200px);
-    margin-left: auto;
-}
-
-.performance-chart
-{
-   width:50%;
+ tr:hover {
+    background-color: #f0f0f0; 
+    cursor: pointer;        
+    transition: background-color 0.3s ease;
 }

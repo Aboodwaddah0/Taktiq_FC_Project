@@ -3,9 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 *
 {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body
+{
+    direction: rtl;
+}
+
 :root {
     --mainColor: #4a6f5d;
     --mainFont: "Righteous", serif;
@@ -40,3 +47,11 @@ ul
 html {
     scroll-behavior:smooth;
 }
+
+h1,h2,h3
+{
+    font-family: var(--secFont);
+
+}
+
+

@@ -135,4 +135,45 @@ const displayPlayer = async () => {
       console.error("العنصر .swiper-slide غير موجود في الصفحة.");
   }
 };
+
+let cups=document.querySelectorAll(".cups .cup .num-cup");
+let section=document.querySelector(".Achievements");
+let started=false;
+
+window.onscroll=function()
+{
+if(window.scrollY>=section.offsetTop)
+{
+  if(!started)
+  {
+    cups.forEach(element=>startCount(element));
+  }
+  started=true;
+}
+else if (window.scrollY < section.offsetTop - section.offsetHeight) {
+  started = false;
+
+  cups.forEach((element) => {
+    element.textContent = "0";
+  });
+}
+}
+
+function startCount(el)
+{
+  let golas=el.dataset.goal;
+  let count=setInterval(()=>
+  {
+    el.textContent++;
+    if(el.textContent==golas)
+    {
+      clearInterval(count);
+    }
+
+  },500)
+}
+
+
+
+
 displayPlayer();
