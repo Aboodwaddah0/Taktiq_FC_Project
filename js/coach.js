@@ -358,7 +358,7 @@ const getFootballData = async () => {
         const response = await axios.get('https://v3.football.api-sports.io/standings?league=39&season=2024', {
             headers: {
                 "x-rapidapi-host": "v3.football.api-sports.io",
-                'x-apisports-key': 'ad8e19b88c6871891ffcc93972dc76d3' // API Key
+                'x-apisports-key': 'ad8e19b88c6871891ffcc93972dc76d3' 
             }
         });
         console.log(response.data)

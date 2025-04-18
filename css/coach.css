@@ -1,4 +1,4 @@
-/* Main content positioning */
+
 body
 {
   font-family: var(--secFont);
@@ -6,7 +6,7 @@ body
 }
 
 .content {
-    margin-left: 200px;
+    
     width: calc(100% - 200px);
     transition: all 0.3s ease;
   }
@@ -134,24 +134,83 @@ align-items: center;
 width: 100%;
 }
 
-table 
+.player-statis .league-table table 
 {
 text-align: center;
   background-color: var(--mainColor);
 width: 75%;
 
 }
-th
+.player-statis .league-table th
 {
   background-color: white;
 }
-tr
+.player-statis .league-table tr
 {
 font-size: 18px;
 }
 
- tr:hover {
+.player-statis .league-table tr:hover {
     background-color: #f0f0f0; 
     cursor: pointer;        
     transition: background-color 0.3s ease;
+}
+.card-features .card1,.card2
+{
+  overflow: auto;
+}
+.dropdown
+{
+display: none;
+}
+
+@media screen and (max-width: 1189px) {
+  .vertical-nav
+  {
+    display: none;
+  }
+
+  .dropdown
+  {
+display: block;
+  }
+  
+}
+@media screen and (max-width: 1189px)
+{
+  .content
+  {
+   width: 100%;
+  }
+}
+@media screen and (max-width: 1189px) {
+
+ .first-cards
+ {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ }
+ .first-cards .card 
+ {
+  width: 50% !important;
+  text-align: center;
+ }
+}
+
+@media screen and (max-width: 971px)
+{
+.card-features
+{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.charts
+{
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 }

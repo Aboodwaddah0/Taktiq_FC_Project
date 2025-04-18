@@ -32,7 +32,33 @@
                 </li>
             </ul>
         </div>
+
+        <div class="dropdown px-5">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+             القائمة
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#dashboard">لوحة التحكم</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#players">اللاعبين</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#training">التدريبات</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-primary" href="#statistics">الاحصائيات</a>
+                </li>
+          
+                <li class="nav-item">
+                  <a class="nav-link text-primary" href="#setting">الاعدادات</a>
+              </li>
+            </ul>
+          </div>
     </nav>
+
+ 
 </div>
 
 <div class="vertical-nav position-fixed top-0 left-0">
@@ -53,11 +79,12 @@
           <a class="nav-link text-white" href="#training">التدريبات</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link text-white" href="#tactics">التكتيكات</a>
-      </li>
-      <li class="nav-item">
           <a class="nav-link text-white" href="#statistics">الاحصائيات</a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#setting">الاعدادات</a>
+    </li>
   </ul>
 </div>
 
@@ -463,7 +490,7 @@
 
 
 <section id="statistics" class="player-statis  gap-5 py-5">
-  <div class="container-card d-flex justify-content-center gap-5 w-100">
+  <div class="container-card d-flex justify-content-center gap-5 w-100 text-center">
     <div class="card w-25">
         <div class="card-header text-center bg-primary text-white">
             افضل الهدافين
@@ -495,11 +522,11 @@
         </div>
     </div>
     
-    <div class="card w-25">
+    <div class="card w-25 ">
         <div class="card-header text-center bg-warning text-white">
            البطاقات
         </div>
-        <div class="card-body text-center bg-light">
+        <div class="card-body text-center  ">
             <div class="table-responsive">
                 <table class="table table-hover table-sm">
                     <thead class="bg-info text-white">
@@ -549,6 +576,59 @@
    
 </section>
 
+<section id="setting" style="display: none;" >
+
+    <div class="d-flex justify-content-center align-items-center ">
+        <form class="py-5 px-4 shadow bg-white rounded w-50">
+          <div class="mb-3">
+            <label for="firstName" class="form-label">الاسم الأول</label>
+            <input type="text" class="form-control" id="firstName">
+          </div>
+      
+          <div class="mb-3">
+            <label for="lastName" class="form-label">اسم العائلة</label>
+            <input type="text" class="form-control" id="lastName">
+          </div>
+      
+          <div class="mb-4">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">لن نشارك بريدك الإلكتروني مع أي جهة أخرى.</div>
+          </div>
+      
+          <div class="mb-3">
+            <label for="currentPassword" class="form-label">كلمة السر</label>
+            <input type="password" class="form-control" id="currentPassword">
+          </div>
+      
+          <div class="mb-3">
+            <label for="phone" class="form-label">رقم الهاتف</label>
+            <input type="tel" class="form-control" id="phone">
+          </div>
+      
+          <div class="mb-3">
+            <label for="profilePicture" class="form-label">صورة شخصية</label>
+            <input type="file" class="form-control" id="profilePicture" accept="image/*">
+          </div>
+      
+          <div class="mb-3">
+            <label for="newPassword" class="form-label">كلمة السر الجديدة</label>
+            <input type="password" class="form-control" id="newPassword">
+          </div>
+      
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">تأكيد كلمة السر</label>
+            <input type="password" class="form-control" id="confirmPassword">
+          </div>
+      
+          <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+        </form>
+      </div>
+      
+</section>
+
+
+
 
 <section id="training">
    <div class="py-5 px-5" ><button  class="add-train-btn bg-danger border-0 fs-5 px-1 py-1 rounded-1 text-white" data-bs-toggle="modal" data-bs-target="#myModal2">اضافة تدريب</button></div> 
@@ -593,6 +673,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
