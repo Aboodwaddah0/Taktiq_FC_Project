@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*.container .farst_img>img {
+    width: 100%;
+    height: fit-content;
+}*/
+
+.farst_img {
+    height: 250px; /* نصف ارتفاع الصورة الأصلية مثلاً */
+    overflow: hidden;
+    position: relative;
+}
+
+.farst_img img {
+    position: relative;
+    top: -250px; /* إزاحة الجزء العلوي للخارج */
+}
+
+.container .content_center .left_side {}
+
+.content_center {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content_center .left_side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left_side>img {
+    width: 750;
+    height: 468;
+}
+
+.content_center .news_content {
+    width: 840px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.content_center .right_side .main_content {
+    width: 370px;
+    height: 50px;
+    color: #000;
+    text-align: center;
+    border: solid rgb(224, 224, 224) 1px;
+
+}
+
+.content_center .right_side .button_content {
+    width: 370px;
+    height: 300px;
+    border: solid rgb(224, 224, 224) 1px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_content .first,
+.sec,
+.thr {
+    width: 301px;
+    height: 76px;
+    text-align: center;
+    border-bottom: solid rgb(224, 224, 224) 1px;
+}
+
+.button_content>div>img {
+    width: 54px;
+    height: 54px;
+}
+
+.button_content>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container #text1 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container #text1 #text11 {
+    width: 750px;
+    height: 112px;
+    font-size: 25px;
+    border-right: solid rgba(13, 80, 0, 0.732) 8px;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #c6c6c6
+}
+
+.container #text1 #text12 {
+    width: 750px;
+    height: fit-content;
+}
+
+.container #text1 #text12>h2 {
+    color: #000;
+}
+
+.container .form-div {
+    width: 750px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top:solid rgb(224, 224, 224) 1.5px;
+}
+
+.form-div >h2{
+    color: #000;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+.container .form-div>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-div input[type="text"],
+.form-div input[type="email"] {
+    /*360 52*/
+    width: 315px;
+    height: 52px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-div input[type="text"] {
+    margin-left: 5px;
+}
+
+.form-div input[type="email"] {
+    margin-right: 5px;
+}
+
+.form-div>form>div {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.form-div>form>textarea {
+    width: 650px;
+    height: 185px;
+    margin-bottom: 10px;
+    resize: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-div>form>button {
+    width: 184px;
+    height: 40px;
+    background-color:#004b07 ;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    color: #fff;
+}
