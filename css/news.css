@@ -6,25 +6,21 @@
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-/*.container .farst_img>img {
-    width: 100%;
-    height: fit-content;
-}*/
 
 .farst_img {
-    height: 250px; /* نصف ارتفاع الصورة الأصلية مثلاً */
+    height: 250px; 
     overflow: hidden;
     position: relative;
 }
 
 .farst_img img {
     position: relative;
-    top: -250px; /* إزاحة الجزء العلوي للخارج */
+    top: -250px; 
 }
 
 .container .content_center .left_side {}

@@ -174,6 +174,18 @@ function startCount(el)
 }
 
 
+ function changeCat(id)
+{
+document.querySelectorAll(".products").forEach(sec=> {
+sec.style.display="none";
+});
+
+document.getElementById(id).style.display="flex";
+
+}
+
+
+
 
 
 displayPlayer();
